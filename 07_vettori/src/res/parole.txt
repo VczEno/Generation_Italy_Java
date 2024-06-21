@@ -1,0 +1,3 @@
+parola1,parola2,parola3
+parola4,parola5,parola6
+parola7,parola8,parola9

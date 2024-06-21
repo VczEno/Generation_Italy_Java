@@ -1,0 +1,6 @@
+Elfo
+Gnomo
+Umano
+Draeneo
+Goblin
+Orco

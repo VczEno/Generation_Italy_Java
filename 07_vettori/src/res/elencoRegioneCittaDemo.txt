@@ -1,0 +1,9 @@
+Lombardia,Brescia,250000
+Lombardia,Milano,600000
+Lombardia
+Veneto,Venezia,130000
+Veneto,Padova,340000
+Emilia-Romagna,Correggio
+Emilia Romagna,Rimini,100000
+Emilia Romagna,Riccione,100001
+Lazio
