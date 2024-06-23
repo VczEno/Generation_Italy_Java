@@ -26,7 +26,7 @@ public class EsBrolyRefactoring {
     public static void main(String[] args) throws FileNotFoundException {
 
         // scanner per leggere il file
-        Scanner file = new Scanner(new File("src\\res\\rigaNumeri.txt"));
+        Scanner file = new Scanner(new File("07_vettori\\src\\res\\rigaNumeri.txt"));
         // contatore per il numero di righe nel file
 
         // definisco un array di dimensione pari alle righe del file, facendo lo split

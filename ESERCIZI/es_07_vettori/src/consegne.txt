@@ -1,0 +1,117 @@
+/*
+        * Esercizio 1
+		 * Scrivere un programma che legga un file contente dei modelli di macchine(almeno dieci).
+		 * 
+         * parte 1
+		 * Il file createlo con i dati che volete.
+		 * importante che mettete un singolo valore per riga.
+         * decidete voi come ottenere l'informazione sulla quantita di auto presenti
+         * (o l'informazione e' presente all'inizio del file oppure dovete contare voi i modelli...)
+		 * 
+		 * il programma chiede all'utente il modello desiderato e permettere una semplice ricerca con l'input inserito
+		 * dare un messaggio positivo se elemento cercato presente nel file
+		 * viceversa comunicare se il dato non e' presente
+         * 
+         * parte 2
+         * modificare il file inserendo i modelli di macchine su una sola riga separate da un apposito separatore.
+         * 
+         * parte 3 
+         * - aggiungere nel secondo file(quello su una riga sola) una seconda riga contenente tanti double quanti sono i modelli di auto.
+         * saranno i prezzi in sterline relativi ai modelli della riga 1
+         * - in caso di modello trovato, aggiungere anche l'informazione del prezzo nel messaggio positivo.
+		 * 
+		 */
+
+
+/*
+Esercizio 2
+//		Il programma quando parte chiede all'utente quanti
+//		numeri vuole memorizzare.
+//		Dopo facciamo inserire i numeri e li carichiamo nell'Array.
+//		Quando l'utente ha fornito tutte le informazioni necessarie
+//		mettiamo a disposizione i seguenti comandi:
+//		- Calcolare la somma dei numeri
+//		- Calcolare la media dei numeri
+//		- Trovare il numero più alto
+//		- Trovare il numero più basso
+//		- Modificare un determinato numero
+//      - stampare i numeri al contrario
+//      - stampare i numeri al contrario ma solo quelli di indice dispari
+//      - stampare i numeri al contrario ma solo quelli pari di indice dispari
+*/
+
+
+/*
+Esercizio 3
+Scrivere un programma che legga un file in cui sono scritte delle parole(almeno 10 nella modalita' che preferite)
+e le salvi in un array
+un utente dovra poter scegliere tra le seguenti opzioni:
+- stampare la parola che contiene piu vocali
+- stampare la parola che contiene piu vocali e l'indice del vettore in cui essa e' contenuta
+- stampare la parola che contiene piu vocali (o le parole se sono piu di una)
+- stampare le parole che iniziano con la lettera 'R' o 'r'
+- stampare le parole che finiscono con la lettera 'e' o 'E' e i loro indici
+- stampare le parole piu corte
+- cercare una parola all'interno del vettore e dare una risposta
+- modificare l'iniziale di una parola a scelta (se possibile, trovare il modo di usare substring)
+
+*/
+/*
+Esercizio 4
+
+Banca on-line
+1- implementare un programma che chieda all'utente di effettuare l'accesso, andando a controllare email e pw
+2- in caso di accesso andato a buon fine, chiedere all'utente cosa vuole fare (utilizzare uno switch):
+partendo da un capitale depositato di 1.000 euro, le possibilita' sono
+prelevare denaro (il prelievo costa 1 euro e non puo essere superiore al totale del saldo presente)
+depositare denaro (il deposito costa 2 euro)
+fare un bonifico (controllare che l'iban inserito contenga 27 caratteri dei quali almeno 5 zeri consecutivi e che inizi con "IT")
+Se il prelievo o il bonifico sono superiori al saldo stampare un messaggio di errore. In tal caso l'operazione non e' consentita
+
+3- Alla fine chiedere all'utente se vuole visualizzare il nuovo saldo utilizzando un ternario
+
+parte Bonus
+4 - creare un menu interattivo in cui l'utente puo' decidere cosa fare
+aggiungere tra le operazioni possibili:
+visualizzare il saldo
+visualizzare lo storico di tutte le operazioni effettuate
+uscita
+per menu interattivo si intende il fatto che il programma consente piu volte all'utente di effettuare le operazioni che desidera,
+finche' non viene selezionata l'uscita
+
+parte Bonus Bonus - difficile
+5- modificare la parte relativa all'accesso in modo che in caso di credenziali errate la domanda venga ripetuta: 
+-per 5 volte per email
+-per 3 volte per la password
+se viene superato uno dei due limiti per i tentativi, il programma termina con un messaggio di blocco.
+
+suggerimento:
+per dare la possibilita' all'utente di effettuare piu operazioni in fila (ad esempio prima deposito, poi faccio un bonifico,...),
+bisogna sfruttare il principio di ITERAZIONE: individuare il ciclo piu adatto...
+
+*/
+
+
+// ESERCIZIO 5 - Ristorante
+//Scrivere il programma per il calcolo dell'ordine di un cliente al ristorante.
+        //L'utente può scegliere tra:
+        //1 - Primi piatti
+        //  Tra i primi piatti si propone:
+        //  1 - Pasta al pesto - 10 euro
+        //  2 - Zuppa di verdure - 5 euro
+        //2 - Secondi piatti
+        //  Tra i secondi piatti si propone:
+        //  1 - Bistecca alla griglia: 15 euro
+        //  2 - Polpette vegetariane: 10 euro
+        //3 - Dessert
+        //  Tra i dessert si propone:
+        //  1 - Crostata di marmellata - 5 euro
+        //  2 - Tiramisù: 10 euro
+        //Alla fine di ogni richiesta di primo, secondo o dessert chiedere all'utente se vuole aggiungere altro
+        //all'ordine.
+        //Se risponde qualcosa diverso da "no" aggiungere 2€ di coperto e 1€ di acqua
+        //Altrimenti ripetere il ciclo finché non decide di essere sazio.
+        //Una volta terminato l'ordine stampare il riepilogo dell'ordine e il prezzo finale.
+
+        //CONTROLLARE OGNI INPUT DELL'UTENTE.
+        //Se ad esempio sceglie altro tra le proposte definite dal programma fare in modo che possa reinserire il valore.

@@ -26,7 +26,7 @@ public class EsBroly {
     public static void main(String[] args) throws FileNotFoundException {
 
         // scanner per leggere il file
-        Scanner file = new Scanner(new File("src\\res\\listaNumeri.txt"));
+        Scanner file = new Scanner(new File("07_vettori\\src\\res\\listaNumeri.txt"));
         // contatore per il numero di righe nel file
         int nLines = 0;
         // scorro il documento riga per riga e incremento il documento
@@ -41,7 +41,7 @@ public class EsBroly {
         int[] numbers = new int[nLines];
 
         // riapro il file per riportare il cursore alla prima riga
-        file = new Scanner(new File("src\\res\\listaNumeri.txt"));
+        file = new Scanner(new File("07_vettori\\src\\res\\listaNumeri.txt"));
 
         // definisco le variabili necessarie per immagazzinare i dati
         String evenList = "List of even number: \n";
