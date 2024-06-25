@@ -1,0 +1,6 @@
+Nome1,4
+Nome2,4
+Nome3,2
+Nome4,1
+Nome5,1
+Nome6,2
