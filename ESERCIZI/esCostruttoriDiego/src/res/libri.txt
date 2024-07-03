@@ -1,0 +1,10 @@
+Orgoglio e Pregiudizio,Jane Austen,950,romanzo,1900-03-05,450000,true,15,5
+Il Signore degli Anelli,J.R.R. Tolkien,1598,fantasy,1978-04-03,204576,true,21,4
+Il Profeta,Kahlil Gibran,98,romanzo,1856-04-03,1856,false,9,3
+Harry Potter e la pietra filosofale,JK Rowling,275,fantasy,1995-03-12,10567,false,14,4
+Se questo Ã¨ un uomo,PrimoLevi,115,drammatico,1956-03-34,20457,false,7,5
+La Bibbia,Dio,34876,bibbiografico,-450003,999999,true,5,5
+Cime Tempestose,Emily Bronte,348,romanzo,1983-03-14,34,false,16,2
+1984,George Orwell,189,distopico,1948-09-30,245,true,9,1
+I Promessi Sposi,Alessandro Manzoni,1822,storico,1822-04-04,10347,true,21,4
+La Divina Commedia,Dante Alighieri,2045,commedia divina,1304-09-14,29123,true,34,3
