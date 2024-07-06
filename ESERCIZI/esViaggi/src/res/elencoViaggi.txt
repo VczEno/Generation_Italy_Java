@@ -1,0 +1,3 @@
+Londra,5,agosto,3,Aereo
+Barcellona,3,ottobre,4,Nave
+ROMA,0,12,1,treno

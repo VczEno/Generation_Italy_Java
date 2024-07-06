@@ -1,66 +1,135 @@
 package Oggetti_01.entities;
 
+import java.io.FileNotFoundException;
+
 public class Libro
 {
-    //Creiamo una classe modello Libro
-    //Proprietà dell'OGGETTO -> deve esistere l'oggetto per poterle richiamare.
-    public String titolo;
-    public double prezzoBase;
-    public double prezzo;
-    
-    //Proprietà della CLASSE -> Esistono a prescindere dall'oggetto
-    //IVAMIN è una proprietà della classe Libro che identifica il valore minimo dell'iva da
-    //applicare sui libri. Essendo il valore minimo consentito dobbiamo essere sicuri che non
-    //venga sovrascritto o modificato quindi lo rendiamo FINAL.
-    public static final int IVAMIN = 4;
-    //Idem per IVAMAX. Nessun oggetto Libro in commercio potrà avere un valore di IVA superiore al 22%
-    public static final int IVAMAX = 22;
-    //Per quanto riguarda lo sconto invece la proprietà di classe non sarà final perché il valore
-    //potrà cambiare a seconda del periodo dell'anno. Un libro ad esempio potrà avere uno sconto di
-    //base del 5% che durante alcuni periodi varia diventando 10, 15, 50 etc.. a seconda della situazione.
-    public static int SCONTO = 5;
+    private String titolo;
+    private String autore;
+    private String genere;
+    private String casaEd;
+    private int nPag;
+    private double pBase;
 
-    //Costruttore
-    public Libro(String titolo, double prezzoBase)
-    {
-        this.titolo = titolo;
-        this.prezzoBase = prezzoBase;
-    }
+    private static final String[] GENERI = {"Fantascienza","Fantasy","Graphic Novel"};
 
-    public Libro(String titolo, double prezzoBase, int iva, String casaEd)
+    /**
+     * Il metodo CHECKLIBRO() riceve gli stessi parametri che poi verranno passati al costruttore. 
+     * Essendo di tipo STATIC è un metodo di classe che quindi può essere richiamato PRIMA DELLA COSTRUZIONE DELL'OGGETTO. 
+     * Il metodo CHECKLIBRO() richiama per ogni parametro un metodo di Vik che controlla quel tipo di parametro secondo determinate logiche. 
+     * Se tutti i controlli sui singoli parametri risultano VERI, allora significa che possono essere passati al costruttore per la creazione 
+     * dell'oggetto. Se uno solo di loro non passa il controllo, il libro non viene creato.
+     * @param titolo
+     * @param autore
+     * @param genere
+     * @param casaEd
+     * @param nPag
+     * @param pBase
+     * @return boolean
+     * @throws FileNotFoundException
+     */
+    public static boolean CHECKLIBRO(   String titolo, String autore, String genere, 
+                                        String casaEd, int nPag, double pBase) throws FileNotFoundException
     {
-        this.titolo = titolo;
-        this.prezzoBase = prezzoBase;
-        this.prezzo = calcolaPrezzo(prezzoBase, iva, casaEd);
-    }
-
-    //Calcolare il prezzo di vendita
-    //Come calcolo il prezzo di vendita?
-    //Al prezzoBase aggiungo l'IVA e tolgo lo sconto.
-    public double calcolaPrezzo(double pb, int i, String cEd)
-    {
-        double ris = pb;
-        //100 : iva = prezzoBase : x
-        //x = (iva * prezzoBase) / 100
-        ris += (i * prezzoBase) / 100;
-        if(cEd.equalsIgnoreCase("Mondadori"))
-            SCONTO = 20;
-        //A questo punto del codice il valore della proprietà di classe SCONTO può essere SOLO:
-        //5 - se la casaEditrice ricevuta come parametro è diversa da "Mondadori"
-        //20 - se la casaEditrice ricevuta come parametro è "Mondadori"
-        ris -= (SCONTO * pb) / 100;
+        boolean ris = false;
+        //Siccome il valore di Vik.MAX è impostato a 100 e questo creerebbe errori per nPag e pBase
+        //andiamo a sovrascrivere quel valore nel metodo CHECKLIBRO così da poterlo utilizzare.
+        Vik.MAX = 2000;
+        if(     Vik.checkString(titolo) == true &&
+                Vik.checkString(autore) == true &&
+                Vik.StringIsPresente(genere, GENERI)    == true    &&
+                Vik.StringIsPresente(casaEd, "Oggetti_01\\main\\elencoEditori.txt") == true &&
+                Vik.isCompreso(nPag)    == true &&
+                Vik.isCompreso(pBase)   == true
+            )
+            ris = true;
         return ris;
+    }
+    
+    public Libro(   String titolo, String autore, String genere, 
+                    String casaEd, int nPag, double pBase)
+    {
+        setTitolo(titolo);
+        setAutore(autore);
+        setGenere(genere);
+        setCasaEd(casaEd);
+        setnPag(nPag);
+        setpBase(pBase);
+    }
+
+    public String getTitolo()
+    {
+        return titolo;
+    }
+    
+    public void setTitolo(String titolo)
+    {
+        this.titolo = titolo;
+    }
+    
+    public String getAutore()
+    {
+        return autore;
+    }
+    
+    public void setAutore(String autore)
+    {
+        this.autore = autore;
+    }
+    
+    public String getGenere()
+    {
+        return genere;
+    }
+    
+    public void setGenere(String genere)
+    {
+        this.genere = genere;
+    }
+    
+    public String getCasaEd()
+    {
+        return casaEd;
+    }
+    
+    public void setCasaEd(String casaEd)
+    {
+        this.casaEd = casaEd;
+    }
+    
+    public int getnPag()
+    {
+        return nPag;
+    }
+    
+    public void setnPag(int nPag)
+    {
+        this.nPag = nPag;
+    }
+    
+    public double getpBase()
+    {
+        return pBase;
+    }
+    
+    public void setpBase(double pBase)
+    {
+        this.pBase = pBase;
+    }
+
+    public double prezzo()
+    {
+        return 0;
     }
 
     public String toString()
     {
-        String ris =    "Titolo: "      +   titolo      +   "\n"        +
-                        "Prezzo base: " +   prezzoBase  +   " euro\n"   ;
-                        if(prezzo > 0)
-                        {  
-                            ris +=  "Sconto: "      +   SCONTO      +   "\n"        +
-                                    "Prezzo: "      +   prezzo      +   " euro\n"   ;
-                        }
-        return ris;
+        return  "Titolo: "      +    titolo     +   "\n"    +
+                "Autore: "      +    autore     +   "\n"    +
+                "Genere: "      +    genere     +   "\n"    +
+                "Editore: "     +    casaEd     +   "\n"    +
+                "Pagine: "      +    nPag       +   "\n"    +
+                "Prezzo: "      +    prezzo()   +   "\n"    +
+                "----------------------------------------"  ;
     }
-}
+}   

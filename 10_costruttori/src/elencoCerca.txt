@@ -1,0 +1,7 @@
+admin,adminpass
+pippo,pluto
+topolino,loveMinni
+paperino,scroogeimperat
+Tolkien,Il signore degli anelli
+Dick,Gli androidi sognano pecore elettriche
+Herbert,Dune

@@ -1,0 +1,7 @@
+Gli androidi sognano pecore elettriche,P.K.Dick,Fantascienza,Urania,230,12.3
+Dune,F.Herbert,Fantascienza,Mondadori,600,18.9
+Sulla fotografia,S.Sontag,Saggio,Einaudi,300,15.6
+Harry Potter e la pietra filosofale,J.K.Rowling,Fantasy,Salani,320,15.6
+Harry Potter e la pietra filosofale,J.K.Rowling,Fantasy,320,15.6
+Crossover,D.Cates,Graphic Novel,Saldapress,150,23.4
+Il signore degli anelli,J.R.R.Tolkien,Fantasy,Rusconi,1200,30

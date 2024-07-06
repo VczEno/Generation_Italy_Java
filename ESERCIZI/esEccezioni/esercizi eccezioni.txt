@@ -1,0 +1,60 @@
+Nei seguenti esercizi gestire gli errori utilizzando il blocco try-catch.
+Tra le tonde del catch, nel caso non si conosca il nome della classe dell'eccezione da gestire, inserite la generica classe Exception: catch(Exception e)
+In caso di eccezione stampare in consolle:
+- un messaggio di errore inerente al contesto (esempio: "il valore inserito non è un numero intero")
+- la "traccia" dell'errore attraverso una chiamata all'apposito metodo (come visto a lezione in mattinata)
+
+Esercizio 1                     
+
+Gestire l'eccezione generata dal codice
+int[] T = null;
+T[0] = 7;
+
+
+
+Esercizio 2                     
+
+Gestire l'eccezione generata dal codice
+String s=null;
+int l = s.length();
+
+
+
+Esercizio 3                     
+
+parte A:
+Scrivi un programma che inseriti due numeri interi da tastiera stampi a video il risultato della divisione di tali numeri, intercettando l'eventuale eccezione della divisione per 0.
+parte B:
+aggiungere alla parte A anche la gestione dell'eventuale eccezione scatenata dall'inserimento da tastiera scorretto (ad esempio un numero decimale o una stringa).
+parte C:
+aggiungere alla parte B il fatto che il denominatore sia selezionato randomicamente dall'insieme dei numeri da 0 a 4.
+
+
+
+Esercizio 4                     
+
+parte A:
+Scrivi un programma che istanziato un vettore di interi di 5 posizioni chieda all'utilizzatore di inserire un numero desiderato in una posizione a scelta.
+Gestire l'eventualità che vengano violati i limiti dell'array.
+parte B:
+aggiungere alla parte A anche la gestione dell'eventuale eccezione scatenata dall'inserimento da tastiera scorretto (ad esempio un numero decimale o una stringa)
+
+
+
+Esercizio 5                     
+
+Realizza un programma che sia in grado di leggere un file in cui siano presenti numeri interi e numeri interi immaginari (disposti come volete).
+Numero intero immaginario: è un numero intero normale preceduto dalla lettera j (ad esempio sono immaginari: j34, j497, j0, j-34; mentre NON sono immaginari: 35, j 46, jciao34, j -43)
+Java di base non riconosce i numeri immaginari, saranno quindi da usare le dovute accortezze.
+
+A) Gestire il caso in cui ci siano difficoltà nella lettura file (e chiudere il file nel finally)
+B) Gestire il caso in cui un numero non sia intero.
+	Nel caso in cui il numero NON sia intero, c'è il fondato sospetto che si tratti di un numero intero immaginario(ma non è sicuro).
+C) Pertanto il corrispondente catch tenta di individuare la 'j' iniziale dell'eventuale numero immaginario.
+	Se ci riesce allora dovrà eliminare la j dal numero, altrimenti stamperà un messaggio di errore.
+D) Gestire attraverso un ulteriore try-catch (innestato nel catch precedente) il caso in cui il nuovo numero (ottenuto dal ritaglio della lettera j) non sia intero.
+E) Creare due Arraylist di interi, uno chiamato interi e l'altro chiamato immaginari. Creare poi un arraylist di stringhe chiamato eccezioni.
+Riempire interi con i numeri interi trovati.
+Riempire immaginari con i numeri interi immaginari trovati.
+Riempire eccezioni con i valori che non rientrano nelle due categorie precedenti.
+Stampare tutto.

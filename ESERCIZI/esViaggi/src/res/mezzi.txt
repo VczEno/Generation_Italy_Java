@@ -1,0 +1,4 @@
+aereo
+treno
+bus
+nave
